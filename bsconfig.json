@@ -1,0 +1,19 @@
+{
+  "name": "re-classnames",
+  "sources": [
+    "src",
+    {
+      "dir": "__tests__",
+      "type" : "dev"
+    },
+  ],
+  "bs-dev-dependencies": ["bs-jest"],
+  "reason": true,
+  "refmt": 3,
+  "bsc-flags": ["-bs-super-errors"],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true,
+  },
+  "suffix": ".bs.js",
+}

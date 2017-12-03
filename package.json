@@ -1,0 +1,31 @@
+{
+  "name": "re-classnames",
+  "version": "0.0.0",
+  "description": "Simple reimplementation of classnames in ReasonML",
+  "main": "src/ClassNames.re",
+  "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "bsb -clean-world -make-world -w",
+    "build": "bsb -clean-world -make-world",
+    "clean": "bsb -clean-world",
+    "test": "yarn run build && jest"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "react",
+    "reason",
+    "reason-react",
+    "reasonml",
+    "ocaml",
+    "bucklescript",
+    "classnames"
+  ],
+  "devDependencies": {
+    "bs-jest": "0.2.0",
+    "bs-platform": "2.1.0"
+  }
+}
