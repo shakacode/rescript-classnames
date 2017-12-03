@@ -1,6 +1,6 @@
 {
   "name": "re-classnames",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple reimplementation of classnames in ReasonML",
   "main": "src/ClassNames.re",
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
