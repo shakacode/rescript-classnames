@@ -24,6 +24,10 @@
     "bucklescript",
     "classnames"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexfedoseev/re-classnames.git"
+  },
   "devDependencies": {
     "bs-jest": "0.2.0",
     "bs-platform": "2.1.0"
