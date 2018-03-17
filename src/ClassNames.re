@@ -1,5 +1,6 @@
 let make = (classNames: list(string)) : string =>
-  List.filter(className => className !== "", classNames)
+  classNames
+  |> List.filter(className => className !== "")
   |> String.concat(" ");
 
 let ifBool = (maybe, className) => maybe ? className : "";
@@ -12,6 +13,6 @@ let ifOpt = maybe =>
 
 let mapOpt = (maybe, map) =>
   switch (maybe) {
-  | Some(value) => map(value)
+  | Some(value) => value |> map
   | None => ""
   };
