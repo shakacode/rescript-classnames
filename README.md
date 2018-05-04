@@ -1,35 +1,50 @@
 # re-classnames
 
+[![npm version](https://img.shields.io/npm/v/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
+[![build status](https://img.shields.io/travis/alexfedoseev/re-classnames/master.svg?style=flat-square)](https://travis-ci.org/alexfedoseev/re-classnames)
+[![dependencies status](https://img.shields.io/gemnasium/alexfedoseev/re-classnames.svg?style=flat-square)](https://gemnasium.com/alexfedoseev/re-classnames)
+[![license](https://img.shields.io/npm/l/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
+
 Simple reimplementation of [classnames](https://github.com/JedWatson/classnames) in [ReasonML](https://reasonml.github.io).
 
 ## Installation
 
 ```shell
-# yarn / npm
+# yarn
 yarn add re-classnames
+
+# or npm
 npm install --save re-classnames
+```
+
+Then add it to `bsconfig.json`:
+
+```json
+"bs-dependencies": [
+  "re-classnames"
+]
 ```
 
 ## Usage
 
+### `Cn.make`
 ```reason
 Cn.make(["one", "two"]) /* => "one two" */
 ```
 
-### `Cn.ifBool`
+### `Cn.ifTrue`
 ```reason
-Cn.make(["one", "two" |> Cn.ifBool(true)]) /* => "one two" */
-Cn.make(["one", "two" |> Cn.ifBool(false)]) /* => "one" */
+Cn.make(["one", "two" |> Cn.ifTrue(true)]) /* => "one two" */
+Cn.make(["one", "two" |> Cn.ifTrue(false)]) /* => "one" */
 ```
 
-### `Cn.ifOpt`
+### `Cn.ifSome`
 ```reason
-/* Cn.ifOpt */
-Cn.make(["one", Some("two") |> Cn.ifOpt]) /* => "one two" */
-Cn.make(["one", None |> Cn.ifOpt]) /* => "one" */
+Cn.make(["one", "two" |> Cn.ifSome(Some("thing"))]) /* => "one two" */
+Cn.make(["one", "two" |> Cn.ifSome(None)]) /* => "one" */
 ```
 
-### `Cn.mapOpt`
+### `Cn.mapSome`
 ```reason
 type t =
   | One
@@ -38,7 +53,7 @@ type t =
 
 Cn.make([
   "one",
-  Cn.mapOpt(
+  Cn.mapSome(
     Some(Two),
     (v) =>
       switch v {
@@ -51,7 +66,7 @@ Cn.make([
 
 Cn.make([
   "one",
-  Cn.mapOpt(
+  Cn.mapSome(
     None,
     (v) =>
       switch v {
@@ -61,6 +76,12 @@ Cn.make([
       }
   )
 ]) /* => "one" */
+```
+
+### `Cn.unwrap`
+```reason
+Cn.make(["one", Some("two") |> Cn.unwrap]) /* => "one two" */
+Cn.make(["one", None |> Cn.unwrap]) /* => "one" */
 ```
 
 ## License

@@ -3,16 +3,22 @@ let make = (classNames: list(string)) : string =>
   |> List.filter(className => className !== "")
   |> String.concat(" ");
 
-let ifBool = (maybe, className) => maybe ? className : "";
+let ifTrue = (maybe, className) => maybe ? className : "";
 
-let ifOpt = maybe =>
+let ifSome = (maybe, className) =>
   switch (maybe) {
-  | Some(value) => value
+  | Some(_) => className
   | None => ""
   };
 
-let mapOpt = (maybe, map) =>
+let mapSome = (maybe, map) =>
   switch (maybe) {
   | Some(value) => value |> map
+  | None => ""
+  };
+
+let unwrap = maybe =>
+  switch (maybe) {
+  | Some(value) => value
   | None => ""
   };
