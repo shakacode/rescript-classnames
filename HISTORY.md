@@ -1,6 +1,6 @@
 # 2.1.0
 
-- `bs-platform` updated to `4.0.1`.
+- `bs-platform` updated to `4.0.2`.
 
 # 2.0.0
 
