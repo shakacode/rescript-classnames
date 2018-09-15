@@ -34,14 +34,14 @@ Cn.make(["one", "two"]) /* => "one two" */
 
 ### `Cn.ifTrue`
 ```reason
-Cn.make(["one", "two" |> Cn.ifTrue(true)]) /* => "one two" */
-Cn.make(["one", "two" |> Cn.ifTrue(false)]) /* => "one" */
+Cn.make(["one", "two"->Cn.ifTrue(true)]) /* => "one two" */
+Cn.make(["one", "two"->Cn.ifTrue(false)]) /* => "one" */
 ```
 
 ### `Cn.ifSome`
 ```reason
-Cn.make(["one", "two" |> Cn.ifSome(Some("thing"))]) /* => "one two" */
-Cn.make(["one", "two" |> Cn.ifSome(None)]) /* => "one" */
+Cn.make(["one", "two"->Cn.ifSome(Some("thing"))]) /* => "one two" */
+Cn.make(["one", "two"->Cn.ifSome(None)]) /* => "one" */
 ```
 
 ### `Cn.mapSome`
@@ -55,12 +55,10 @@ Cn.make([
   "one",
   Cn.mapSome(
     Some(Two),
-    (v) =>
-      switch v {
-      | One => "one"
-      | Two => "two"
-      | Tree => "three"
-      }
+    fun
+    | One => "one"
+    | Two => "two"
+    | Tree => "three",
   )
 ]) /* => "one two" */
 
@@ -68,20 +66,18 @@ Cn.make([
   "one",
   Cn.mapSome(
     None,
-    (v) =>
-      switch v {
-      | One => "one"
-      | Two => "two"
-      | Tree => "three"
-      }
+    fun
+    | One => "one"
+    | Two => "two"
+    | Tree => "three",
   )
 ]) /* => "one" */
 ```
 
-### `Cn.unwrap`
+### `Cn.unpack`
 ```reason
-Cn.make(["one", Some("two") |> Cn.unwrap]) /* => "one two" */
-Cn.make(["one", None |> Cn.unwrap]) /* => "one" */
+Cn.make(["one", Some("two")->Cn.unpack]) /* => "one two" */
+Cn.make(["one", None->Cn.unpack]) /* => "one" */
 ```
 
 ## License
