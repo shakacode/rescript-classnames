@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
 [![build status](https://img.shields.io/travis/alexfedoseev/re-classnames/master.svg?style=flat-square)](https://travis-ci.org/alexfedoseev/re-classnames)
-[![dependencies status](https://img.shields.io/gemnasium/alexfedoseev/re-classnames.svg?style=flat-square)](https://gemnasium.com/alexfedoseev/re-classnames)
 [![license](https://img.shields.io/npm/l/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
 
 Simple reimplementation of [classnames](https://github.com/JedWatson/classnames) in [ReasonML](https://reasonml.github.io).
