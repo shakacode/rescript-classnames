@@ -1,5 +1,8 @@
 # History
 
+## 4.0.0
+- **[ BREAKING ]** `bs-platform` updated to `5.0.0`.
+
 ## 3.0.0
 - **[ BREAKING ]** API style is changed from data-last to data-first (use `->` instead of `|>`)
 - **[ BREAKING ]** `Cn.unwrap` renamed to `Cn.unpack` (in Rust `unwrap` throws on `None`, while `Cn` just ignores it)
