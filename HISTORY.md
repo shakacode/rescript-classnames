@@ -1,5 +1,8 @@
 # History
 
+## 4.1.0
+- `bs-platform` updated to `v7`.
+
 ## 4.0.0
 - **[ BREAKING ]** `bs-platform` updated to `5.0.0`.
 

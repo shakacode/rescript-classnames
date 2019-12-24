@@ -30,11 +30,8 @@
     "type": "git",
     "url": "https://github.com/alexfedoseev/re-classnames.git"
   },
-  "peerDependencies": {
-    "bs-platform": "^5.0.0"
-  },
   "devDependencies": {
-    "@glennsl/bs-jest": "0.4.8",
-    "bs-platform": "5.0.4"
+    "@glennsl/bs-jest": "0.4.9",
+    "bs-platform": "7.0.1"
   }
 }
