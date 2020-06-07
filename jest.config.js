@@ -1,3 +1,4 @@
 module.exports = {
-  testEnvironment: "node"
+  testEnvironment: "node",
+  testRegex: "tests/.*\\.bs\\.js$",
 };

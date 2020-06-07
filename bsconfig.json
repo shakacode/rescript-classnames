@@ -3,7 +3,7 @@
   "sources": [
     "src",
     {
-      "dir": "__tests__",
+      "dir": "tests",
       "type" : "dev"
     },
     {
