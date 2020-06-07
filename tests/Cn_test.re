@@ -22,6 +22,27 @@ describe("Cn", () => {
     expect(result) |> toBe(className);
   });
 
+  test("Cn.fromList: 2", () => {
+    let result = Cn.fromList(["one", "two"]);
+    let className = "two one ";
+
+    expect(result) |> toBe(className);
+  });
+
+  test("Cn.fromList: 3", () => {
+    let result = Cn.fromList(["one", "two", "three"]);
+    let className = "three two one ";
+
+    expect(result) |> toBe(className);
+  });
+
+  test("Cn.(<:>): warning 44", () => {
+    let result = [@warning "+44"] Cn.("one" <:> "two" <:> "three");
+    let className = "one two three";
+
+    expect(result) |> toBe(className);
+  });
+
   test("Cn.on: true", () => {
     let result = Cn.("one" + "two"->on(true));
     let className = "one two";
@@ -194,7 +215,7 @@ describe("Cn", () => {
     expect(result) |> toBe(className);
   });
 
-  test("All together", () => {
+  test("Cn.(+): mix", () => {
     let result =
       Cn.(
         "one"
@@ -218,6 +239,36 @@ describe("Cn", () => {
             )
       );
     let className = "one two five six three";
+
+    expect(result) |> toBe(className);
+  });
+
+  test("Cn.fromList: mix", () => {
+    let result =
+      Cn.(
+        fromList([
+          "one",
+          Some(Two)
+          ->mapSome(
+              fun
+              | One => "one"
+              | Two => "two"
+              | Three => "three",
+            ),
+          None->take,
+          "four"->onErr(Ok()),
+          "five"->on(true),
+          "six"->onSome(Some("thing")),
+          Ok(Three)
+          ->mapOk(
+              fun
+              | One => "one"
+              | Two => "two"
+              | Three => "three",
+            ),
+        ])
+      );
+    let className = "three six five two one ";
 
     expect(result) |> toBe(className);
   });
