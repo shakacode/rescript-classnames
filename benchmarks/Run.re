@@ -1,3 +1,5 @@
+[@warning "-3"];
+
 open Benchmark;
 
 Suite.(
@@ -35,7 +37,7 @@ Suite.(
       )
     )
   ->case("CnNext API", () =>
-      CnNext.(
+      Cn.(
         "A"
         + "B"
         + "C"->on(true)
