@@ -6,6 +6,10 @@
       "dir": "__tests__",
       "type" : "dev"
     },
+    {
+      "dir": "benchmarks",
+      "type" : "dev"
+    },
   ],
   "bs-dev-dependencies": ["@glennsl/bs-jest"],
   "reason": true,
