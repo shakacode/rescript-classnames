@@ -4,7 +4,7 @@ open Benchmark;
 
 Suite.(
   make("Cn")
-  ->case("Cn API", () =>
+  ->case("Cn List API", () =>
       Cn.(
         make([
           "A",
@@ -36,7 +36,7 @@ Suite.(
         ])
       )
     )
-  ->case("CnNext API", () =>
+  ->case("Cn (+) API", () =>
       Cn.(
         "A"
         + "B"

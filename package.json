@@ -10,6 +10,7 @@
     "build": "bsb -clean-world -make-world",
     "clean": "bsb -clean-world",
     "test": "yarn run build && jest",
+    "bench": "yarn run build && node benchmarks/Run.bs.js",
     "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
     "preversion": "yarn run clean && yarn run refmt && yarn run test"
   },
