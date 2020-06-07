@@ -5,7 +5,7 @@ type t =
   | Two
   | Tree;
 
-describe("ClassNames", () => {
+describe("Cn", () => {
   open Expect;
 
   test("Cn.make: 2", () => {
