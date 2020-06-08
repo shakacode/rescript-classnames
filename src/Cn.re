@@ -1,11 +1,13 @@
 let none = "";
 
 let append = (x1, x2) =>
-  switch (x1, x2) {
-  | ("", "") => none
-  | (x1, "") => x1
-  | ("", x2) => x2
-  | (x1, x2) => x1 ++ " " ++ x2
+  switch (x1) {
+  | "" => x2
+  | x1 =>
+    switch (x2) {
+    | "" => x1
+    | x2 => x1 ++ " " ++ x2
+    }
   };
 
 let (+) = append;
@@ -16,7 +18,7 @@ let fromList = {
   let rec aux = acc =>
     fun
     | [] => acc
-    | [cn, ...rest] when cn == "" => aux(acc, rest)
+    | ["", ...rest] => aux(acc, rest)
     | [cn, ...rest] => aux(acc ++ " " ++ cn, rest);
   aux("");
 };
