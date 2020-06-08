@@ -1,13 +1,10 @@
 let none = "";
 
 let append = (x1, x2) =>
-  switch (x1) {
-  | "" => x2
-  | x1 =>
-    switch (x2) {
-    | "" => x1
-    | x2 => x1 ++ " " ++ x2
-    }
+  switch (x1, x2) {
+  | ("", x)
+  | (x, "") => x
+  | (x1, x2) => x1 ++ " " ++ x2
   };
 
 let (+) = append;
