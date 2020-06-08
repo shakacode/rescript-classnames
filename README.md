@@ -236,9 +236,9 @@ Cn.(
 
 ## Benchmarks
 ```
-Cn.(+) x 3,781,425 ops/sec ±0.56% (90 runs sampled)
-Cn.fromList x 1,545,656 ops/sec ±0.61% (93 runs sampled)
-classnames.js x 926,701 ops/sec ±0.82% (89 runs sampled)
+Cn.(+) x 5,294,674 ops/sec ±1.72% (90 runs sampled)
+Cn.fromList x 1,522,738 ops/sec ±1.03% (93 runs sampled)
+classnames.js x 921,325 ops/sec ±0.54% (91 runs sampled)
 ```
 
 ## FAQ
