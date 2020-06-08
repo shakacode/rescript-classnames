@@ -307,4 +307,4 @@ Cn.mapSomeU(
 It might gain a tiny bit of performance but in the majority of the cases, it wouldn't be noticeable.
 
 ## License
-MIT.
+See [LICENSE](./LICENSE).
