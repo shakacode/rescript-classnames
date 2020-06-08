@@ -1,7 +1,7 @@
 # re-classnames
 
-[![npm version](https://img.shields.io/npm/v/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
-[![build status](https://img.shields.io/travis/alexfedoseev/re-classnames/master.svg?style=flat-square)](https://travis-ci.org/alexfedoseev/re-classnames)
+[![version](https://img.shields.io/npm/v/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
+[![build](https://github.com/MinimaHQ/re-classnames/workflows/build/badge.svg)](https://github.com/MinimaHQ/re-classnames/actions?query=workflow%3Abuild)
 [![license](https://img.shields.io/npm/l/re-classnames.svg?style=flat-square)](https://www.npmjs.com/package/re-classnames)
 
 Reimplementation of [classnames](https://github.com/JedWatson/classnames) in [ReasonML](https://reasonml.github.io).
