@@ -1,8 +1,8 @@
 {
   "name": "re-classnames",
   "version": "4.1.0",
-  "description": "Simple reimplementation of classnames in ReasonML",
-  "main": "src/ClassNames.re",
+  "description": "Reimplementation of classnames in ReasonML",
+  "main": "src/Cn.re",
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -10,6 +10,7 @@
     "build": "bsb -clean-world -make-world",
     "clean": "bsb -clean-world",
     "test": "yarn run build && jest",
+    "bench": "yarn run build && node benchmarks/Run.bs.js",
     "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
     "preversion": "yarn run clean && yarn run refmt && yarn run test"
   },
@@ -28,10 +29,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexfedoseev/re-classnames.git"
+    "url": "https://github.com/MinimaHQ/re-classnames.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "0.4.9",
-    "bs-platform": "7.0.1"
+    "@glennsl/bs-jest": "0.5.1",
+    "benchmark": "2.1.4",
+    "bs-platform": "7.3.2",
+    "classnames": "2.2.6"
   }
 }

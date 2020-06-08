@@ -1,5 +1,20 @@
 # History
 
+## 5.0.0
+- Perf! We're ~5.5 times faster than `v4` and ~4 times faster than [`classnames.js`](https://www.npmjs.com/package/classnames) counterpart.
+- **[ NEW ]** `(+)` infix operator
+- **[ NEW ]** `append` function
+- **[ NEW ]** `fromList` function
+- **[ NEW ]** `none` alias
+- **[ NEW ]** `onOk` combinator
+- **[ NEW ]** `mapOk` combinator
+- **[ NEW ]** `onErr` combinator
+- **[ NEW ]** `mapErr` combinator
+- **[ DEPRECATED ]** `make`. Use either `(+)` (recommended) or `fromList` (slower).
+- **[ DEPRECATED ]** `ifTrue`. Use `on`.
+- **[ DEPRECATED ]** `ifSome`. Use `onSome`.
+- **[ DEPRECATED ]** `unpack`. Use `take`.
+
 ## 4.1.0
 - `bs-platform` updated to `v7`.
 
