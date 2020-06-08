@@ -1,5 +1,8 @@
 # History
 
+## 5.0.1
+- Even faster :) Thanks, **[@Et7f3](https://github.com/Et7f3)**!
+
 ## 5.0.0
 - Perf! We're ~5.5 times faster than `v4` and ~4 times faster than [`classnames.js`](https://www.npmjs.com/package/classnames) counterpart.
 - **[ NEW ]** `(+)` infix operator
