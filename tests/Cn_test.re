@@ -24,14 +24,14 @@ describe("Cn", () => {
 
   test("Cn.fromList: 2", () => {
     let result = Cn.fromList(["one", "two"]);
-    let className = "two one ";
+    let className = " one two";
 
     expect(result) |> toBe(className);
   });
 
   test("Cn.fromList: 3", () => {
     let result = Cn.fromList(["one", "two", "three"]);
-    let className = "three two one ";
+    let className = " one two three";
 
     expect(result) |> toBe(className);
   });
@@ -268,7 +268,7 @@ describe("Cn", () => {
             ),
         ])
       );
-    let className = "three six five two one ";
+    let className = " one two five six three";
 
     expect(result) |> toBe(className);
   });

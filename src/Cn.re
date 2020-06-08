@@ -17,7 +17,7 @@ let fromList = {
     fun
     | [] => acc
     | [cn, ...rest] when cn == "" => aux(acc, rest)
-    | [cn, ...rest] => aux(cn ++ " " ++ acc, rest);
+    | [cn, ...rest] => aux(acc ++ " " ++ cn, rest);
   aux("");
 };
 
