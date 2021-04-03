@@ -3,7 +3,7 @@ let make = arr => {
   for i in 0 to arr->Js.Array2.length - 1 {
     switch arr->Js.Array2.unsafe_get(i) {
     | "" => ()
-    | name => result := (i == 0 ? name : result.contents ++ " " ++ name)
+    | name => result := (result.contents == "" ? name : result.contents ++ " " ++ name)
     }
   }
   result.contents

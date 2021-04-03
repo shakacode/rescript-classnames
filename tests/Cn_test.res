@@ -22,30 +22,23 @@ describe("Cn", () => {
     expect(result) |> toBe(className)
   })
 
-  test("2 classnames with truthy condition", () => {
-    let result = Cn.make(["one", true ? "two" : ""])
-    let className = "one two"
+  test("empty string at the first position", () => {
+    let result = Cn.make([false ? "one" : "", "two", "three"])
+    let className = "two three"
 
     expect(result) |> toBe(className)
   })
 
-  test("2 classnames with falsy condition", () => {
-    let result = Cn.make(["one", false ? "two" : ""])
-    let className = "one"
-
-    expect(result) |> toBe(className)
-  })
-
-  test("3 classnames with truthy condition", () => {
-    let result = Cn.make(["one", true ? "two" : "", "three"])
-    let className = "one two three"
-
-    expect(result) |> toBe(className)
-  })
-
-  test("3 classnames with falsy condition", () => {
+  test("empty string in the middle", () => {
     let result = Cn.make(["one", false ? "two" : "", "three"])
     let className = "one three"
+
+    expect(result) |> toBe(className)
+  })
+
+  test("empty string at the last position", () => {
+    let result = Cn.make(["one", "two", false ? "three" : ""])
+    let className = "one two"
 
     expect(result) |> toBe(className)
   })
