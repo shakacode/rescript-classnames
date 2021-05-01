@@ -14,12 +14,3 @@ let mapOkU: (result('a, 'b), (. 'a) => string) => string;
 let onErr: (string, result('a, 'b)) => string;
 let mapErr: (result('a, 'b), 'b => string) => string;
 let mapErrU: (result('a, 'b), (. 'b) => string) => string;
-
-[@deprecated "Use either `Cn.(a + b + c)` or `Cn.fromList([a, b, c])`"]
-let make: list(string) => string;
-[@deprecated "Use Cn.on"]
-let ifTrue: (string, bool) => string;
-[@deprecated "Use Cn.onSome"]
-let ifSome: (string, option('a)) => string;
-[@deprecated "Use Cn.take"]
-let unpack: option(string) => string;

@@ -80,20 +80,3 @@ let mapErrU = (x, fn) =>
   | Ok(_) => none
   | Error(x) => fn(. x)
   };
-
-// --- Deprected
-
-let make = cns => cns->Belt.List.keep(x => x !== "")->String.concat(" ", _);
-
-let ifTrue = (cn, x) => x ? cn : "";
-
-let ifSome = (cn, x) =>
-  switch (x) {
-  | Some(_) => cn
-  | None => ""
-  };
-
-let unpack =
-  fun
-  | Some(x) => x
-  | None => "";

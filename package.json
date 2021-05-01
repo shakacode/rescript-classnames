@@ -1,9 +1,9 @@
 {
-  "name": "re-classnames",
+  "name": "rescript-classnames",
   "version": "5.0.1",
-  "description": "Reimplementation of classnames in ReasonML",
-  "main": "src/Cn.re",
-  "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
+  "description": "Reimplementation of classnames in ReScript",
+  "main": "src/Cn.res",
+  "author": "Alex Fedoseev <alex@fedoseev.mx>",
   "license": "MIT",
   "scripts": {
     "start": "bsb -clean-world -make-world -w",
@@ -11,7 +11,6 @@
     "clean": "bsb -clean-world",
     "test": "yarn run build && jest",
     "bench": "yarn run build && node benchmarks/Run.bs.js",
-    "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
     "preversion": "yarn run clean && yarn run refmt && yarn run test"
   },
   "files": [
@@ -29,12 +28,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MinimaHQ/re-classnames.git"
+    "url": "https://github.com/MinimaHQ/rescript-classnames.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "0.5.1",
+    "@glennsl/bs-jest": "0.7.0",
     "benchmark": "2.1.4",
-    "bs-platform": "7.3.2",
-    "classnames": "2.2.6"
+    "bs-platform": "9.0.2",
+    "classnames": "2.3.1"
   }
 }
