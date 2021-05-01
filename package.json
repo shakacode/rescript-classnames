@@ -11,7 +11,7 @@
     "clean": "bsb -clean-world",
     "test": "yarn run build && jest",
     "bench": "yarn run build && node benchmarks/Run.bs.js",
-    "preversion": "yarn run clean && yarn run refmt && yarn run test"
+    "preversion": "yarn run clean && yarn run test"
   },
   "files": [
     "src",
