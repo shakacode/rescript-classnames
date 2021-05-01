@@ -1,5 +1,10 @@
 # History
 
+## 6.0.0
+- Library transitioned to the ReScript syntax with the new name: `rescript-classnames`.
+- **[ BREAKING ]** We reduced the API surface by a lot. See [re-classnames#api](https://github.com/MinimaHQ/re-classnames#api).
+- **[ DEPRECATED ]** Old api is deprecated and available under `CnRe` namespace.
+
 ## 5.0.1
 - Even faster :) Thanks, **[@Et7f3](https://github.com/Et7f3)**!
 

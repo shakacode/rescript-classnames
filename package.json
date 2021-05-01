@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MinimaHQ/re-classnames.git"
+    "url": "https://github.com/MinimaHQ/rescript-classnames.git"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",

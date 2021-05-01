@@ -126,8 +126,8 @@ let classnamesJs = () =>
   open Suite
 
   make("Cn")
+  ->case("js interpolation", jsInterpolation)
   ->case("rescript-classnames", rescriptClassnames)
-  ->case("Js interpolation", jsInterpolation)
   ->case("classnames.js", classnamesJs)
   ->on(#cycle(cycle => cycle->Cycle.result->Js.log))
   ->on(#complete(@this suite => suite->Result.fastest->Js.log2("The fastest:", _)))
