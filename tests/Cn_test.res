@@ -77,3 +77,16 @@ describe("Cn", () => {
     expect(result) |> toBe(className)
   })
 })
+
+describe("Cx", () => {
+  open Expect
+
+  test("cx", () => {
+    open Cx
+
+    let result = cx(["one", "two"])
+    let className = "one two"
+
+    expect(result) |> toBe(className)
+  })
+})
