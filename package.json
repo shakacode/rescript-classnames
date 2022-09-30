@@ -6,9 +6,9 @@
   "author": "Alex Fedoseev <alex@fedoseev.mx>",
   "license": "MIT",
   "scripts": {
-    "start": "bsb -clean-world -make-world -w",
-    "build": "bsb -clean-world -make-world",
-    "clean": "bsb -clean-world",
+    "start": "rescript build -with-deps -w",
+    "build": "rescript build -with-deps",
+    "clean": "rescript clean",
     "test": "yarn run build && jest",
     "bench": "yarn run build && node benchmarks/Run.bs.js",
     "preversion": "yarn run clean && yarn run test"
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",
     "benchmark": "2.1.4",
-    "bs-platform": "9.0.2",
-    "classnames": "2.3.1"
+    "classnames": "2.3.2",
+    "rescript": "10.0.1"
   }
 }
