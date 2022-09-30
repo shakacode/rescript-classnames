@@ -9,14 +9,14 @@
     {
       "dir": "benchmarks",
       "type" : "dev"
-    },
+    }
   ],
   "bs-dev-dependencies": ["@glennsl/bs-jest"],
   "reason": true,
   "refmt": 3,
   "package-specs": {
     "module": "commonjs",
-    "in-source": true,
+    "in-source": true
   },
   "suffix": ".bs.js",
   "warnings": {
