@@ -1,0 +1,31 @@
+{
+    "name": "rescript-classnames",
+    "sources": [
+        "src",
+        {
+            "dir": "tests",
+            "type": "dev"
+        },
+        {
+            "dir": "benchmarks",
+            "type": "dev"
+        }
+    ],
+    "bs-dependencies": [
+        "@rescript/core"
+    ],
+    "bs-dev-dependencies": [
+        "@glennsl/rescript-jest"
+    ],
+    "package-specs": {
+        "module": "es6",
+        "in-source": true
+    },
+    "suffix": ".res.js",
+    "bsc-flags": [
+        "-open RescriptCore"
+    ],
+    "warnings": {
+        "number": "-44"
+    }
+}

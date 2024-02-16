@@ -1,5 +1,10 @@
 open Benchmark
 
+module Process = {
+  @val @scope(("process", "exit"))
+  external exit: int => unit = "exit"
+}
+
 let rescriptClassnames = () => {
   Cn.make([
     "A",
@@ -110,10 +115,11 @@ let classnamesJs = () =>
       )
     }
     if notEqual {
-      Js.Console.error(
+      Console.error(
         `${case} returns invalid result:\n  E: "${expectedResult}"\n  A: "${actualResult}"`,
       )
-      Node.Process.exit(1)
+
+      Process.exit(1)
     }
   }
 
@@ -129,7 +135,7 @@ let classnamesJs = () =>
   ->case("js interpolation", jsInterpolation)
   ->case("rescript-classnames", rescriptClassnames)
   ->case("classnames.js", classnamesJs)
-  ->on(#cycle(cycle => cycle->Cycle.result->Js.log))
-  ->on(#complete(@this suite => suite->Result.fastest->Js.log2("The fastest:", _)))
+  ->on(#cycle(cycle => cycle->Cycle.result->Console.log))
+  ->on(#complete(@this suite => suite->Result.fastest->Console.log2("The fastest:", _)))
   ->run
 }

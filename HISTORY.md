@@ -1,5 +1,9 @@
 # History
 
+## 7.0.0
+- `rescript` is updated to `v11`.
+- **[ BREAKING ]** Old Reason API is removed.
+
 ## 6.0.0
 - Library transitioned to the ReScript syntax with the new name: `rescript-classnames`.
 - **[ BREAKING ]** We reduced the API surface by a lot. See [re-classnames#api](https://github.com/MinimaHQ/re-classnames#api).

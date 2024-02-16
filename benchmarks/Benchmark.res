@@ -1,11 +1,12 @@
 module Cycle = {
   type t
   @get external target: t => string = "target"
-  let result = x => x->target->Js.String.make
+  let result = x => x->target->String.make
 }
 
 module Suite = {
   type t
+  type result
 
   @module("benchmark") @new external make: string => t = "Suite"
 
@@ -20,12 +21,12 @@ module Suite = {
       | #complete(@this (t => unit))
     ],
   ) => t = "on"
-  @send external run: t => unit = "run"
-}
 
-module Result = {
-  type t
-  @send external fastest: (Suite.t, @as("fastest") _) => t = "filter"
-  @send external name: (t, @as("name") _) => string = "map"
-  let fastest = x => x->fastest->name
+  @send external run: t => unit = "run"
+  @send external filter: (t, string) => result = "filter"
+  @send external map: (result, string) => string = "map"
+
+  module Result = {
+    let fastest = x => x->filter("fastest")->map("name")
+  }
 }

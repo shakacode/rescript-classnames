@@ -21,7 +21,7 @@ yarn add rescript-classnames
 npm install --save rescript-classnames
 ```
 
-Then add it to `bsconfig.json`:
+Then add it to `rescript.json`:
 
 ```json
 "bs-dependencies": [
@@ -83,6 +83,8 @@ js interpolation x 775,890,362 ops/sec ±1.46% (87 runs sampled)
 rescript-classnames x 2,493,334 ops/sec ±0.64% (89 runs sampled)
 classnames.js x 794,502 ops/sec ±0.62% (91 runs sampled)
 ```
+
+P.S. To run benchmarks, change `package-specs.module` to `commonjs` in `rescript.json`.
 
 ## License
 See [LICENSE](./LICENSE).
