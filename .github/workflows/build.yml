@@ -44,6 +44,3 @@ jobs:
 
       - name: Test
         run: yarn run test
-
-      - name: Benchmark
-        run: yarn run bench
