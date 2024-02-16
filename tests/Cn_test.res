@@ -12,35 +12,35 @@ describe("Cn", () => {
     let result = Cn.make(["one", "two"])
     let className = "one two"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 
   test("3 classnames", () => {
     let result = Cn.make(["one", "two", "three"])
     let className = "one two three"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 
   test("empty string at the first position", () => {
     let result = Cn.make([false ? "one" : "", "two", "three"])
     let className = "two three"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 
   test("empty string in the middle", () => {
     let result = Cn.make(["one", false ? "two" : "", "three"])
     let className = "one three"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 
   test("empty string at the last position", () => {
     let result = Cn.make(["one", "two", false ? "three" : ""])
     let className = "one two"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 
   test("mix", () => {
@@ -74,7 +74,7 @@ describe("Cn", () => {
     ])
     let className = "one two five six three"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 })
 
@@ -87,6 +87,6 @@ describe("Cx", () => {
     let result = cx(["one", "two"])
     let className = "one two"
 
-    expect(result) |> toBe(className)
+    expect(result)->toBe(className)
   })
 })
