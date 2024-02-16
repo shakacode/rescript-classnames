@@ -1,6 +1,6 @@
 {
   "name": "rescript-classnames",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Reimplementation of classnames in ReScript",
   "main": "src/Cn.res",
   "author": "Alex Fedoseev <alex@35mil.me>",
