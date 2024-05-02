@@ -1225,10 +1225,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@rescript/core@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@rescript/core/-/core-1.0.0.tgz#8626f3b1c09eeb1b4788f42f754e58d3e68041c1"
-  integrity sha512-F5HURYYx8Kp6h1KBiri2nFwGKR16o9/XTCNl2TEWfCwqR+MTzf/lpuPuB6ajnaYytsU0kTUBIFI0DOoLgkDxSg==
+"@rescript/core@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@rescript/core/-/core-1.3.0.tgz#e7ebc6814772ccabac23c980d5bb0851ad8338d1"
+  integrity sha512-wNZOZ63sYcaIYZCmTZeIPCeLa3HCGgPbIOR8zjyNkoBYUlxNV8Nb2ZyqlXR5Mb9ttvv8fTV56JbKhyVEZEYo8g==
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -3009,10 +3009,10 @@ requires-port@^1.0.0:
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
-rescript@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.npmjs.org/rescript/-/rescript-11.0.1.tgz"
-  integrity sha512-7T4PRp/d0+CBNnY6PYKffFqo9tGZlvnZpboF/n+8SKS+JZ6VvXJO7W538VPZXf3EYx1COGAWWvkF9e/HgSAqHg==
+rescript@11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/rescript/-/rescript-11.1.0.tgz#68dec0b3cbc456c1f9c8e4f10bda6fae49bf7f92"
+  integrity sha512-9la2Dv+ACylQ77I8s4spPu1JnLZXbH5WgxcLHLLUBWgFFSiv0wXqgzWztrBIZqwFgVX5BYcwldUqUVcEzdCyHg==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"

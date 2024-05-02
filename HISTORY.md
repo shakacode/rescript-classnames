@@ -1,5 +1,9 @@
 # History
 
+## 7.0.1
+- `rescript` is updated to `v11.1.0`.
+- `rescript/core` is updated to `v1.3.0`.
+
 ## 7.0.0
 - `rescript` is updated to `v11`.
 - **[ BREAKING ]** Old Reason API is removed.
