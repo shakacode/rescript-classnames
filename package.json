@@ -1,6 +1,6 @@
 {
   "name": "rescript-classnames",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "type": "module",
   "description": "Reimplementation of classnames in ReScript",
   "main": "src/Cn.res",
