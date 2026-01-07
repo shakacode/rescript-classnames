@@ -11,10 +11,7 @@
             "type": "dev"
         }
     ],
-    "bs-dependencies": [
-        "@rescript/core"
-    ],
-    "bs-dev-dependencies": [
+    "dev-dependencies": [
         "@glennsl/rescript-jest"
     ],
     "package-specs": {
@@ -22,9 +19,6 @@
         "in-source": true
     },
     "suffix": ".res.js",
-    "bsc-flags": [
-        "-open RescriptCore"
-    ],
     "warnings": {
         "number": "-44"
     }
