@@ -1,13 +1,14 @@
 {
   "name": "rescript-classnames",
-  "version": "7.0.1",
+  "version": "8.0.0",
+  "type": "module",
   "description": "Reimplementation of classnames in ReScript",
   "main": "src/Cn.res",
   "author": "Alex Fedoseev <alex@35mil.me>",
   "license": "MIT",
   "scripts": {
-    "start": "rescript build -with-deps -w",
-    "build": "rescript build -with-deps",
+    "start": "rescript build -w",
+    "build": "rescript build",
     "clean": "rescript clean",
     "test": "yarn run build && jest",
     "bench": "yarn run build && node benchmarks/Run.res.js",
@@ -33,15 +34,13 @@
     "url": "https://github.com/MinimaHQ/rescript-classnames.git"
   },
   "devDependencies": {
-    "@babel/core": "7.23.9",
-    "@babel/preset-env": "7.23.9",
-    "@glennsl/rescript-jest": "0.10.0",
-    "babel-jest": "29.7.0",
+    "@babel/core": "7.28.5",
+    "@babel/preset-env": "7.28.5",
+    "@glennsl/rescript-jest": "0.13.1",
+    "babel-jest": "30.2.0",
     "benchmark": "2.1.4",
     "classnames": "2.5.1",
-    "rescript": "11.1.0"
+    "rescript": "12.0.2"
   },
-  "dependencies": {
-    "@rescript/core": "1.3.0"
-  }
+  "dependencies": {}
 }
