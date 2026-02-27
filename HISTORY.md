@@ -1,5 +1,8 @@
 # History
 
+## 8.0.0
+- `rescript` is updated to `v12`.
+
 ## 7.0.1
 - `rescript` is updated to `v11.1.0`.
 - `rescript/core` is updated to `v1.3.0`.
