@@ -8,7 +8,7 @@ module Suite = {
   type t
   type result
 
-  @module("benchmark") @new external make: string => t = "Suite"
+  @module("benchmark") @scope("default") @new external make: string => t = "Suite"
 
   @send external case: (t, string, unit => 'a) => t = "add"
 
